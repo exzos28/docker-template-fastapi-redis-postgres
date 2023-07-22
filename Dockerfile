@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8000
 
 # Команда, которая будет запускать FastAPI приложение при старте контейнера
-CMD ["python", "app/main.py"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--reload"]
